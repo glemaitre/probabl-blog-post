@@ -1,6 +1,6 @@
 # Open source software priorities at Probabl
 
-## Retrospective
+## Retrospective on the past 6 months
 
 This section summarizes the progress of Probabl's work on the different supported
 open-source projects.
