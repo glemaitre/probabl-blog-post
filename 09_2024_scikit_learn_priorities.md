@@ -112,3 +112,10 @@ We make sure that `scikit-learn` is compatible with the WebAssembly stack:
 [`pyodide`](https://github.com/pyodide/pyodide),
 [`jupyterlite`](https://github.com/jupyterlite/jupyterlite). We reported potential
 issues upstream and helped run the SciPy test suite for the pyodide project.
+
+### [`hazardous](https://github.com/soda-inria/hazardous)
+
+The current focus for this project is to define the scope of the library such that it
+does not overlap with existing tools. While the code is developed in parallel with
+a research project, we are working on improving tests and documentation to make the library
+more robust and ready for a first release.
