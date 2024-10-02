@@ -1,5 +1,25 @@
 # Open source software priorities at Probabl
 
+At Probabl, we continue our dedicated efforts to support and enhance `scikit-learn` and
+its ecosystem. In this post, we provide a retrospective on the work we have
+accomplished on `scikit-learn` and other supported open-source packages over the past
+6 months. Additionally, we outline our updated priorities and focus areas for the next
+6 months.
+
+As we reflect on our progress and look ahead, it is important to reiterate the key
+considerations that guide our decision-making process:
+
+* Identifying big picture goals and themes that improve user experience and provide
+  tools for the entire machine learning pipeline, from training and exploration to
+  production.
+* Insights from community surveys conducted in 2023 to understand core contributors'
+  concerns and priorities. Additionally, we will soon incorporate feedback from the
+  ongoing [user `scikit-learn` survey](https://forms.gle/zUXvWjGUN1nWhJ2V6) to further
+  align our efforts with user needs and expectations.
+* Commitment to revisiting our list of priorities approximately twice a year.
+
+Let's review our achievements and set the stage for our upcoming focus areas.
+
 ## Retrospective on the past 6 months
 
 This section summarizes the progress of Probabl's work on the different supported
@@ -119,3 +139,13 @@ The current focus for this project is to define the scope of the library such th
 does not overlap with existing tools. While the code is developed in parallel with
 a research project, we are working on improving tests and documentation to make the library
 more robust and ready for a first release.
+
+## Focus Areas for the Next 6 Months
+
+As we look ahead to the next six months, we have identified several key areas where we
+will concentrate our efforts to further enhance `scikit-learn` and its ecosystem. These
+focus areas align with our general objectives and aim to address current challenges
+and opportunities in the machine learning landscape.
+
+TODO: incorporate the team focus for each project here. We need to decide first the
+priorities for each project.
