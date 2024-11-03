@@ -223,6 +223,9 @@ versions of `scikit-learn` and `NumPy`.
 
 *Vincent-Maladiere, glemaitre*
 
+We will help a tackling item from the community roadmap available at:
+https://skrub-data.org/stable/vision.html#roadmap
+
 ### [`hazardous`](https://github.com/soda-inria/hazardous)
 
 *Vincent-Maladiere, ogrisel, glemaitre*
