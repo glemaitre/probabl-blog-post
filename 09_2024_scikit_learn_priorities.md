@@ -239,7 +239,7 @@ https://skrub-data.org/stable/vision.html#roadmap
 1. Generalize `MultiIncidenceGradientBoosting` as a meta-estimator to wrap any
    classifier that supports `sample_weight`
 
-## The maintainers
+## Our contrubotors
 
 The following open source engineers from Probabl are contributing to the above
 priorities for the different projects:
