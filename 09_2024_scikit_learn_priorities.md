@@ -43,7 +43,7 @@ We successfully completed two major short-term priorities:
    metadata routing as specified in
    [SLEP6](https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep006/proposal.html).
    This new API consistently handles metadata (e.g., `sample_weight`, `groups`, etc.)
-   for all estimators. It allows for fewer bugs and enables new
+   for almost all estimators. It allows for fewer bugs and enables new
    use cases that were not possible before.
 
 Both of these projects represent major milestones for `scikit-learn`. In our current
