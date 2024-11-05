@@ -252,3 +252,9 @@ priorities for the different projects:
 - [Stefanie Senger](https://github.com/StefanieSenger)
 - [Tamara Atanasoska](https://github.com/tamaraatanasoska)
 - [Vincent Maldière](https://github.com/Vincent-Maladiere)
+
+We want to acknowledge that all this work would not have been possible without the
+incredible support of the scikit-learn community. The continuous engagement, feedback,
+and contributions from community members, whether through code, documentation, bug
+reports, or discussions, have been instrumental in shaping and advancing these
+projects.
