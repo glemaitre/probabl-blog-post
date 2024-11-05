@@ -1,12 +1,12 @@
 # Open source software priorities at Probabl
 
-At Probabl, we continue our dedicated efforts to support and enhance `scikit-learn` and
-its ecosystem. In this post, we provide a retrospective on the work we have
-accomplished on `scikit-learn` and other supported open-source packages over the past
-6 months. Additionally, we outline our updated priorities and focus areas for the next
-6 months.
+At Probabl and together with the wider community, we continue our dedicated efforts to
+support and enhance `scikit-learn` and its ecosystem. In this post, we provide a
+retrospective on the work accomplished on `scikit-learn` and other supported
+open-source packages over the past 6 months. Additionally, we outline our updated
+priorities and focus areas for the next 6 months.
 
-As we reflect on our progress and look ahead, it is important to reiterate the key
+As we reflect on the progress and look ahead, it is important to reiterate the key
 considerations that guide our decision-making process:
 
 * Identifying big picture goals and themes that improve user experience and provide
@@ -18,7 +18,10 @@ considerations that guide our decision-making process:
   align our efforts with user needs and expectations.
 * Commitment to revisiting our list of priorities approximately twice a year.
 
-Let's review our achievements and set the stage for our upcoming focus areas.
+We would like to emphasize that none of the work detailed below would have been
+possible without the collaborative efforts of the wider `scikit-learn` community.
+
+Let's review the achievements and set the stage for our upcoming focus areas.
 
 ## Retrospective on the past 6 months
 
@@ -37,12 +40,12 @@ these priorities.
    1. Website Migration: We successfully migrated the `scikit-learn` website to the new
       PyData theme-based website. This modernization effort improves the user
       experience and aligns our documentation with the broader PyData ecosystem.
-   1. SLEP6 - Metadata Routing: We completed adapting most estimators to handle
-      metadata routing as specified in
+   1. SLEP6 - Metadata Routing: We completed adapting all estimators (apart from
+      `AdaBoost`) to handle metadata routing as specified in
       [SLEP6](https://scikit-learn-enhancement-proposals.readthedocs.io/en/latest/slep006/proposal.html).
       This new API consistently handles metadata (e.g., `sample_weight`, `groups`, etc.)
-      for almost all estimators. It allows for fewer bugs and enables new
-   use cases that were not possible before.
+      for almost all estimators. It allows for fewer bugs and enables new use cases that
+      were not possible before.
 
 Both of these projects represent major milestones for `scikit-learn`. In our current
 round of priorities, we outline follow-up work for both the website and metadata
@@ -50,13 +53,20 @@ routing to further improve and expand on these changes.
 
 -  Mid-term priorities
 
-   1. Implementation of a new `scikit-learn` estimator, called
+   1. Implementation of a new `scikit-learn` meta-estimator, called
       `TunedThresholdClassifierCV`, allowing optimization of the operational decision.
+      In addition, the `FixedThresholdClassifier` estimator has been added and allows
+      to use a pre-specified threshold for the operational decision.
    1. Progress on the Array-API adoption by making it possible to train and test a
       pipeline containing a `PCA` and `Ridge` estimator trained on `torch` tensors
       located on GPU.
    1. Some work to improve the developer experience by improving the developer tools
-      available in `scikit-learn` and made available for third-party projects.
+      available in `scikit-learn` and made available for third-party projects. For
+      instance, we made public some internal APIs that are required to create
+      `scikit-learn` estimators (e.g., data validation, estimator tags). Also, we
+      start to improve the tests checking the API conformance of third-party libraries
+      with `scikit-learn`. More work is needed in this area to make it easier to
+      create estimators and check the compatibility with `scikit-learn`.
 
 - Long-term priorities
 
@@ -79,8 +89,8 @@ We dedicated resources to maintain the following projects that are related to co
 orchestration: `joblib`, `loky`, `cloudpickle`, `threadpoolctl`, and support for
 Python free-threaded mode.
 
-`threadpoolctl` has been released in the past few months and includes better support
-for BLAS libraries (FlexBLAS, OpenBLAS, Netlib, Accelerate, etc.).
+A new version of `threadpoolctl` was released in the past few months and includes better
+support for BLAS libraries (FlexiBLAS, OpenBLAS, Netlib, Accelerate, etc.).
 
 We dedicated substantial work to ensuring scikit-learn's compatibility with Python 3.13's
 free-threaded mode, including extensive testing, necessary adaptations, and reporting
@@ -150,16 +160,21 @@ We start by focusing on the future work for `scikit-learn`.
    - We will work on adapting the existing displays to visualize the outputs of
      cross-validation results.
    - We will search for ways to improve the HTML representation of estimators.
-1. Callbacks API: *jeremiedbb, adrinjalali, glemaitre, ogrisel*
+1. [SLEP023](https://github.com/scikit-learn/enhancement_proposals/pull/90) Callbacks
+   API: *jeremiedbb, adrinjalali, glemaitre, ogrisel*
    - We will work on merging the infrastructure for callbacks together with a callback
      to provide progress bars.
    - Subsequently, we will work on additional callbacks.
-1. Improve histogram gradient-boosting: *GaelVaroquaux, glemaitre, lesteve, ogrisel*
-   - We will benchmark the `HistGradientBoosting` estimators to understand the room
-     for improvement of these estimators to match the performance of LightGBM and
-     XGBoost.
-   - We will assess if we should merge both `GradientBoosting` and
-     `HistGradientBoosting` estimators into a single class.
+1. Improve histogram gradient-boosting: *GaelVaroquaux, glemaitre, lesteve, ogrisel,
+   lorentzenchr*
+   - We will benchmark in terms of statistical performance the `HistGradientBoosting`
+     estimators to understand the room for improvement of these estimators to match
+     the performance of LightGBM and XGBoost.
+   - We will work on improving the computational performance following the work of
+     `lorentzenchr`.
+   - We will assess what are the potential issues, pros, and cons to merge
+     `GradientBoosting` and `HistGradientBoosting` estimators into a single class.
+     This will feed the discussion to take a decision on the best way to move forward.
 1. Array API: *betatim, ogrisel, lesteve, StefanieSenger, OmarManzoor, EmilyXinyi*
    - We will continue our work on the Array API adoption. Notably, we will work on
      adopting the API for `Nystroem`, `Ridge` and at least one solver of
@@ -253,8 +268,8 @@ priorities for the different projects:
 - [Tamara Atanasoska](https://github.com/tamaraatanasoska)
 - [Vincent Maldière](https://github.com/Vincent-Maladiere)
 
-We want to acknowledge that all this work would not have been possible without the
-incredible support of the scikit-learn community. The continuous engagement, feedback,
-and contributions from community members, whether through code, documentation, bug
-reports, or discussions, have been instrumental in shaping and advancing these
+Again, we want to acknowledge that all this work would not have been possible without
+the incredible support of the scikit-learn community. The continuous engagement,
+feedback, and contributions from community members, whether through code, documentation,
+bug reports, or discussions, have been instrumental in shaping and advancing these
 projects.
