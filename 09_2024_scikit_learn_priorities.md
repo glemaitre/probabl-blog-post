@@ -61,12 +61,12 @@ routing to further improve and expand on these changes.
       pipeline containing a `PCA` and `Ridge` estimator trained on `torch` tensors
       located on GPU.
    1. Some work to improve the developer experience by improving the developer tools
-      available in `scikit-learn` and made available for third-party projects. For
+      available in `scikit-learn` and making them available for third-party projects. For
       instance, we made public some internal APIs that are required to create
       `scikit-learn` estimators (e.g., data validation, estimator tags). Also, we
-      start to improve the tests checking the API conformance of third-party libraries
+      started to improve the tests checking the API conformance of third-party libraries
       with `scikit-learn`. More work is needed in this area to make it easier to
-      create estimators and check the compatibility with `scikit-learn`.
+      create estimators and check their compatibility with `scikit-learn`.
 
 - Long-term priorities
 
@@ -79,14 +79,14 @@ routing to further improve and expand on these changes.
    1. Continuous Integration and Continuous Deployment: We kept our continuous
       integration and continuous deployment infrastructure up to date.
    1. Community outreach: Since February 2024, we attended multiple Python conferences
-      to promote the latest work on `scikit-learn`. We attended the following
-      conferences: PyCon Lithuania, PyCon Italia, CZI Open Science, EuroSciPy, PyData
+      to promote the latest work on `scikit-learn`;
+      PyCon Lithuania, PyCon Italia, CZI Open Science, EuroSciPy, PyData
       Amsterdam, and PyData Paris.
 
 ### Computing orchestration
 
 We dedicated resources to maintain the following projects that are related to computing
-orchestration: `joblib`, `loky`, `cloudpickle`, `threadpoolctl`, and support for
+orchestration: `joblib`, `loky`, `cloudpickle`, `threadpoolctl`, and worked on supporting
 Python free-threaded mode.
 
 A new version of `threadpoolctl` was released in the past few months and includes better
@@ -103,12 +103,12 @@ estimators developed in `fairlearn` are compatible with `scikit-learn`. To achie
 we used the testing framework provided by `scikit-learn` to test the `fairlearn`
 estimators.
 
-We also helped at releasing `fairlearn` and make sure it is compatible with the
+We also helped with the release of `fairlearn` and made sure that it is compatible with the
 different upstream dependencies (e.g. `numpy`, `scikit-learn`).
 
 ### [`skops`](https://github.com/skops-dev/skops)
 
-The main activity in the project relates to non-trivial maintenance tasks
+The main activity in this project relates to non-trivial maintenance tasks
 to ensure that the project is in a healthy state and compatible with the latest
 versions of `scikit-learn` and `NumPy`.
 
@@ -126,7 +126,7 @@ In the past few months, we focused on delivering new features such as:
 
 ### Python in the browser (WebAssembly)
 
-We make sure that `scikit-learn` is compatible with the WebAssembly stack:
+We made sure that `scikit-learn` is compatible with the WebAssembly stack:
 [`pyodide`](https://github.com/pyodide/pyodide),
 [`jupyterlite`](https://github.com/jupyterlite/jupyterlite). We reported potential
 issues upstream and helped run the SciPy test suite for the pyodide project.
@@ -174,7 +174,7 @@ We start by focusing on the future work for `scikit-learn`.
      `lorentzenchr`.
    - We will assess what are the potential issues, pros, and cons to merge
      `GradientBoosting` and `HistGradientBoosting` estimators into a single class.
-     This will feed the discussion to take a decision on the best way to move forward.
+     This will feed into the discussion to make a decision on the best way to move forward.
 1. Array API: *betatim, ogrisel, lesteve, StefanieSenger, OmarManzoor, EmilyXinyi*
    - We will continue our work on the Array API adoption. Notably, we will work on
      adopting the API for `Nystroem`, `Ridge` and at least one solver of
@@ -213,7 +213,7 @@ We start by focusing on the future work for `scikit-learn`.
 
 ### Computing orchestration
 
-We have to adapt all the stack (`joblib`, `loky`, `cloudpickle`, `threadpoolctl`) to the
+We have to adapt the whole stack (`joblib`, `loky`, `cloudpickle`, `threadpoolctl`) to the
 CPython free-threaded mode. This will involve some stress testing to ensure that the
 parallelism works as expected.
 
@@ -228,7 +228,7 @@ https://docs.google.com/document/d/1rNCqRQP0g6kVplqB4DSW3o9ruXuJQun9yYv6FBouaac/
 
 *tamaraatanasoska, adrinjalali*
 
-The main activity in the project relates to non-trivial maintenance tasks
+The main activity in this project relates to non-trivial maintenance tasks
 to ensure that the project is in a healthy state and compatible with the latest
 versions of `scikit-learn` and `NumPy`.
 
