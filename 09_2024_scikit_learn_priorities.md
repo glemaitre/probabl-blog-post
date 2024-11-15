@@ -56,7 +56,7 @@ routing to further improve and expand on these changes.
    1. Implementation of a new `scikit-learn` meta-estimator, called
       `TunedThresholdClassifierCV`, allowing optimization of the operational decision.
       In addition, the `FixedThresholdClassifier` estimator has been added and allows
-      to use a pre-specified threshold for the operational decision.
+      to use a pre-specified threshold for the operational decision-making.
    1. Progress on the Array-API adoption by making it possible to train and test a
       pipeline containing a `PCA` and `Ridge` estimator trained on `torch` tensors
       located on GPU.
