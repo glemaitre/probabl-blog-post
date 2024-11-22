@@ -71,10 +71,13 @@ routing to further improve and expand on these changes.
 - Long-term priorities
 
    1. General maintenance of the project: We reviewed a substantial number of pull
-      requests and issues opened by external contributors.
+      requests and issues opened by external contributors. Indeed, a member of the
+      scikit-learn maintainers team make sure to triage newly opened issues and
+      provide a first quick response to newly open pull-requests.
    1. Python 3.13 support: We worked on supporting Python 3.13 free-threaded mode and
       set up regular testing to ensure compatibility until it becomes officially
-      available.
+      available. We also closely collaborate with the NumPy, SciPy, and Quansight teams
+      to have a shared effort to ensure compatibility with upstream projects.
    1. Releases: Since February 2024, we released `scikit-learn` 1.5.0, 1.5.1, and 1.5.2.
    1. Continuous Integration and Continuous Deployment: We kept our continuous
       integration and continuous deployment infrastructure up to date.
@@ -149,7 +152,8 @@ and opportunities in the machine learning landscape.
 
 We start by focusing on the future work for `scikit-learn`.
 
-1. Statistical correctness: *ogrisel, snath-xoc, antoinebaker, jeremiedbb*
+1. Statistical, algorithmic, and numerical correctness: *ogrisel, snath-xoc,
+   antoinebaker, jeremiedbb*
    - We will continue our maintenance work to ensure that sample weights are
       correctly handled in estimators.
    - We will improve the documentation to better explain which cross-validation
@@ -165,6 +169,8 @@ We start by focusing on the future work for `scikit-learn`.
    - We will work on merging the infrastructure for callbacks together with a callback
      to provide progress bars.
    - Subsequently, we will work on additional callbacks.
+   - Some of the callbacks will required to discuss with maintainers of other projects.
+     We should make sure to discuss with them to provide the best experience.
 1. Improve histogram gradient-boosting: *GaelVaroquaux, glemaitre, lesteve, ogrisel,
    lorentzenchr*
    - We will benchmark in terms of statistical performance the `HistGradientBoosting`
@@ -188,6 +194,8 @@ We start by focusing on the future work for `scikit-learn`.
    - We will provide a visualization tool to understand how metadata are routed
      between estimators.
    - We will write or modify examples to illustrate how to use metadata routing.
+   - We will make sure to discuss with projects that would benefit from this feature
+     to ensure that the feature is useful for the community.
 1. Model inspection: *lucyleeow, glemaitre, TamaraAtanasoska*
    - We will check on adapting the current mean decrease in impurity (MDI) to work
      on test sets.
